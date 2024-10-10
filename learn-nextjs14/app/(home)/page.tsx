@@ -1,13 +1,13 @@
 import Navigation from "../../components/navigation";
 
 export const metadata = {
-  title: "About-us",
+  title: "Home",
 };
 
 export default function Tomato() {
   return (
     <div>
-      <h1>About Us! </h1>
+      <h1>Home</h1>
     </div>
   );
 }

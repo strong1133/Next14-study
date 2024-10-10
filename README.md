@@ -53,4 +53,6 @@
     6. Hydration: html를 react component로 intial 하는것
 
     7. 이러한 Hydration은 next의 모든 컴포넌트에 대해 일어나지는 않음!
-        -> 
+        -> "use client" 라는 문구가 추가된 컴포넌트에 대해서만 일어나는 일이다.
+            즉, "use client" 라고 명시하는것은 next에게 이 컴포넌트는 Hydrated 되어야 해 라고 지정하는 것이다. 이렇게 된 요소들은 interactive 하다 할수 있음.
+            
