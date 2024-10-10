@@ -1,7 +1,10 @@
-import Avartar from "./components/avartar";
+import Navigation from "../../components/navigation";
 
-
-export default function Tomato(){
-    return <h1>About Us! <Avartar/></h1>
-
+export default function Tomato() {
+  return (
+    <div>
+      <Navigation />
+      <h1>About Us! </h1>
+    </div>
+  );
 }
