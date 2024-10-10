@@ -1,14 +1,15 @@
+import Link from "next/link";
 import Navigation from "../../components/navigation";
 
 export const metadata = {
   title: "Home",
 };
 
-const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 const getMovies = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 5000));
-  return fetch(URL).then((response) => response.json());
+  await new Promise((resolve) => setTimeout(resolve, 1));
+  return fetch(API_URL).then((response) => response.json());
 };
 
 export default async function HomePage() {
@@ -16,8 +17,11 @@ export default async function HomePage() {
 
   return (
     <div>
-      <h1>Home</h1>
-      {JSON.stringify(movies)}
+      {movies.map((movie) => (
+        <li key={movie.id}>
+          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+        </li>
+      ))}
     </div>
   );
 }
