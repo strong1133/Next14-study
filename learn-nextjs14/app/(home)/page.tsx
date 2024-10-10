@@ -1,30 +1,23 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Navigation from "../../components/navigation";
 
-export default function Page() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [moives, setMovies] = useState();
+export const metadata = {
+  title: "Home",
+};
 
-  const getMovies = async () => {
-    setIsLoading(true);
-    const response = await fetch(
-      "https://nomad-movies.nomadcoders.workers.dev/movies"
-    );
-    const json = await response.json();
-    setMovies(json);
-    setIsLoading(false);
-  };
+const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
-  useEffect(() => {
-    getMovies();
-  }, []);
+const getMovies = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  return fetch(URL).then((response) => response.json());
+};
+
+export default async function HomePage() {
+  const movies = await getMovies();
 
   return (
     <div>
       <h1>Home</h1>
-      {isLoading ? " Loading... " : JSON.stringify(moives)}
+      {JSON.stringify(movies)}
     </div>
   );
 }
