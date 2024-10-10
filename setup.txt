@@ -26,3 +26,11 @@
     1. next가 자동으로 ts인것을 파악하고 tsconfig.json을 생성
     2. next가 page.tsx안에 default 리액트 컴포넌트 함수를 실행시키고 화면을 렌더할때 layout.tsx가 없는 것을 확인하고 자동생성함.
     3. 2번을 미루어 봤을때 실행에는 반드시 layout.tsx 가 필요함,, 또한 리액트를 직접 임포트하지 않고도 이러한 동작이 다 가능함.
+
+
+8. route
+    1. 리액트에서는 react-router를 이용해서 
+        / -> Home
+        /company -> Company
+        이런식으로 path에 따른 view를 수동으로 할당해서 했다면
+        next에서는 app폴터하위에 있는 fs구조로 경로를 만들고 각 경로 폴더에 존재하는 page.tsx가 그 view를 담당함.
