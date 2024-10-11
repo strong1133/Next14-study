@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {API_URL} from "@/app/(home)/constant";
+import {API_URL} from "@/app/(main)/(home)/constant";
 
 
 export const metadata = {

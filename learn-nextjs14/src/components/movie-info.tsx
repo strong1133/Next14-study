@@ -1,4 +1,4 @@
-import {API_URL} from "@/app/(home)/constant";
+import {API_URL} from "@/app/(main)/(home)/constant";
 
 
 const getMovie = async (id: string) => {
