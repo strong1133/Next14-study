@@ -3,7 +3,7 @@ import {NextRequest, NextResponse} from "next/server";
 
 
 export async function middleware(req: NextRequest) {
-    const token = "";
+    const token = "ㅁㄴㅇ";
     const publicPaths = ['/login']
     const isPublicPath = publicPaths.includes(req.nextUrl.pathname)
 

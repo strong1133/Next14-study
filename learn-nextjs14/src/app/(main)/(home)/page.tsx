@@ -1,14 +1,8 @@
 import Link from "next/link";
-import {API_URL} from "@/app/(main)/(home)/constant";
-
+import {getMovies} from "@/repository/apis/movies/movies";
 
 export const metadata = {
   title: "Home",
-};
-
-const getMovies = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1));
-  return fetch(API_URL).then((response) => response.json());
 };
 
 export default async function HomePage() {
