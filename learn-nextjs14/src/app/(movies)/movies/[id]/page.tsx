@@ -1,5 +1,5 @@
-import { Suspense, useState } from "react";
-import { API_URL } from "../../../(home)/page";
+import { Suspense } from "react";
+
 import MovieInfo from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
 
