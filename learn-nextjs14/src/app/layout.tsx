@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import React from "react";
-import Navigation from "@/components/navigation";
 
 export const metadata :Metadata= {
   title:{
@@ -18,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div>{children}</div>
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   );
